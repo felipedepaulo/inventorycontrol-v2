@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".firestore.FirestoreLerDadosActivity">
+
+    <TextView
+        android:id="@+id/textView_Firestore_LerDados_Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="Nome">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_Firestore_LerDados_Idade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="Idade">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_Firestore_LerDados_Fumante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="Fumante">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_Firestore_LerDados_Nome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="Nome2">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_Firestore_LerDados_Idade2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="Idade2">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_Firestore_LerDados_Fumante2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:hint="Fumante2">
+    </TextView>
+
+
+</LinearLayout>

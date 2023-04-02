@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/Background"
+    tools:context=".MenuPrincipalActivity">
+
+    <Button
+        android:id="@+id/buttonRegistrarSaida"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        style="@style/Button"
+        android:layout_marginTop="100dp"
+        android:text="Registrar Saída"
+        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/buttonRegistrarEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        style="@style/Button"
+        android:text="Registrar Entrada"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/buttonRegistrarSaida"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrarSaida"
+        app:layout_constraintStart_toStartOf="@+id/buttonRegistrarSaida">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonHistoricoEntradasSaidas"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        style="@style/Button"
+        android:text="Histórico de Entradas e Saídas"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrarEntrada"
+        app:layout_constraintStart_toEndOf="@+id/buttonRegistrarEntrada">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonEstoque"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        style="@style/Button"
+        android:text="Gerenciamento de Estoque"
+        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHistoricoEntradasSaidas"
+        app:layout_constraintStart_toEndOf="@+id/buttonHistoricoEntradasSaidas">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonDeslogar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        style="@style/Button"
+        android:text="Deslogar"
+        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEstoque"
+        app:layout_constraintStart_toEndOf="@+id/buttonEstoque">
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

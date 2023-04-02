@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Background"
+    tools:context=".EstoqueActivity">
+
+
+    <Button
+        android:id="@+id/bt_Realizar_Alterar_Cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        style="@style/Button"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/realizar_alterar_cadastro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
+
+    <Button
+        android:id="@+id/bt_Pesquisar_Estoque"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        style="@style/Button"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/pesquisar_produto_no_estoque"
+        app:layout_constraintTop_toBottomOf="@id/bt_Realizar_Alterar_Cadastro"
+        app:layout_constraintStart_toStartOf="@id/bt_Realizar_Alterar_Cadastro"
+        app:layout_constraintEnd_toEndOf="@id/bt_Realizar_Alterar_Cadastro">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

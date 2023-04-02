@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_ListaitemUsuarios"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="1dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ListaItem_Item_Usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="usuario"
+                android:textSize="18sp"
+                android:gravity="start"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_ListaItem_Item_dataHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dataHora"
+                android:textSize="15sp"
+                android:gravity="start"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_ListaItem_Item_operacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="operacao"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:gravity="start"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_ListaItem_Item_imei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="imei"
+                android:textSize="18sp"
+                android:gravity="start"
+                android:textStyle="bold">
+            </TextView>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>

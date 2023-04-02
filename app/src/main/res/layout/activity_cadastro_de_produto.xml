@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Background"
+    tools:context=".CadastroDeProdutoActivity">
+
+
+    <TextView
+        android:id="@+id/tvLabelFabricanteCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fabricante"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edFabricanteCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelFabricanteCadastro">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLabelModeloCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:text="@string/tv_dados_do_produto_modelo"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edFabricanteCadastro">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edModeloCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelModeloCadastro">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLabelCorCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/tv_dados_do_produto_cor"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edModeloCadastro">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edCorCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelCorCadastro">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLabelCodigoBarrasCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:text="@string/tv_dados_do_produto_imei"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edCorCadastro">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edCodigoBarrasCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelCodigoBarrasCadastro">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLabelBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:text="@string/tv_dados_do_produto_box"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edCodigoBarrasCadastro">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelBox">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLabelEan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:text="EAN"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edBox">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edEan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelEan">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLabelUnidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:text="Loja"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/edEan">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edUnidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        style="@style/EditText"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelUnidade">
+    </EditText>
+
+    <Button
+        android:id="@+id/button_cadastrar_produto"
+        style="@style/Button"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar"
+        android:textAllCaps="false"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/edUnidade"
+        app:layout_constraintTop_toBottomOf="@+id/edUnidade"
+    ></Button>
+
+    <Button
+        android:id="@+id/button_cancela_cadastro"
+        style="@style/Button"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_dados_do_produto_cancelar"
+        android:textAllCaps="false"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/edUnidade"
+        app:layout_constraintEnd_toEndOf="@id/edUnidade">
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">InventoryControl V1</string>
+    <string name="upload_imagem">Upload Imagem</string>
+    <string name="download_imagem">Download Imagem</string>
+    <string name="firestore_ler_dados">Firestore - Ler Dados</string>
+    <string name="firestore_gravar_alterar_ler_dados">Firestore - Gravar-Alterar-Ler Dados</string>
+    <string name="categorias">Categorias</string>
+    <string name="registrar_entrada">Registrar Entrada</string>
+    <string name="deslogar">Deslogar</string>
+    <string name="button_entrar">Registrar Entrada</string>
+    <string name="button_saida">Registrar Saída</string>
+    <string name="tv_dados_do_produto">Dados do Produto</string>
+    <string name="tv_dados_do_produto_fabricante">Fabricante</string>
+    <string name="tv_dados_do_produto_modelo">Modelo</string>
+    <string name="tv_dados_do_produto_cor">Cor</string>
+    <string name="tv_dados_do_produto_codigo_de_barras">Código de Barras</string>
+    <string name="bt_dados_do_produto_registrar_saida">Registrar Saída</string>
+    <string name="bt_dados_do_produto_cancelar">Cancelar</string>
+    <string name="operacao_de_saida">Operação de Saída</string>
+    <string name="operacao_de_entrada">Operação de Entrada</string>
+    <string name="bt_entrar">Entrar</string>
+    <string name="cadastro_de_produto">Cadastro de Produto</string>
+    <string name="fabricante">Fabricante</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="tv_dados_do_produto_imei">IMEI</string>
+    <string name="realizar_alterar_cadastro">Realizar/Alterar Cadastro</string>
+    <string name="pesquisar_produto_no_estoque">Pesquisar Produto no Estoque</string>
+    <string name="gerenciamento_de_estoque">Gerenciamento de Estoque</string>
+    <string name="tv_dados_do_produto_box">Box</string>
+    <string name="tv_dados_do_produto_ean">EAN</string>
+
+</resources>

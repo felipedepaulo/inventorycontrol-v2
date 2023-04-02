@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Inventory Control"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InventoryControlV1"
+        tools:targetApi="31">
+        <activity
+            android:name=".DetalhesDoProdutoActivity"
+            android:label="Detalhes do Produto"
+            android:exported="false" />
+        <activity
+            android:name=".DetalhesDaOperacaoActivity"
+            android:label="Detalhes da Operação"
+            android:exported="false" />
+        <activity
+            android:name=".ResultadoPesquisaProdutoActivity"
+            android:label="Resultado Pesquisa de Produtos"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResultadoPesquisaActivity"
+            android:label="Resultado Pesquisa"
+            android:exported="false" />
+        <activity
+            android:name=".EstoqueActivity"
+            android:label="Gerenciamento do Estoque"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroDeProdutoActivity"
+            android:label="Cadastro de Produtos"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroDeEntradaActivity"
+            android:label="Registro de Entrada"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroDeSaidaActivity"
+            android:label="Registro de Saída"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:label="Menu Principal"
+            android:exported="false" />
+        <activity
+            android:name=".firestore.FirestoreGravarAlterarRemoverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firestore.FirestoreLerDadosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".storage.StorageDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            tools:ignore="ExtraText" />
+        <activity
+            android:label="Leitor"
+            android:name=".LeitorActivity"
+            android:exported="false"
+            tools:ignore="ExtraText" />
+        <activity
+            android:label="Login"
+            android:name=".LoginActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
