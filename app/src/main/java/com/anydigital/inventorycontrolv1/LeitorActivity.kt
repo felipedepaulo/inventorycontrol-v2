@@ -2,9 +2,12 @@ package com.anydigital.inventorycontrolv1
 
 
 import android.Manifest
+import android.content.DialogInterface
 import android.content.Intent
 
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.inputmethodservice.InputMethodService.InputMethodImpl
 import android.os.Bundle
 import android.os.Vibrator
 import android.view.Menu
@@ -14,6 +17,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.zxing.Result
 import me.dm7.barcodescanner.zxing.ZXingScannerView
 import me.dm7.barcodescanner.zxing.ZXingScannerView.ResultHandler
@@ -25,6 +30,16 @@ class LeitorActivity: AppCompatActivity(),ResultHandler {
     private var txtResult: TextView? = null
     private lateinit var auth: FirebaseAuth;
     private var menuItem: MenuItem? = null
+
+    var db: FirebaseFirestore? = null
+
+
+    val colecao_samsung = "Samsung"
+    val colecao_samsung_historico = "SamsungHistorico"
+
+    val colecao_americanas = "Americanas"
+    val colecao_americanas_historico = "AmericanasHistorico"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +90,7 @@ class LeitorActivity: AppCompatActivity(),ResultHandler {
         txtResult?.text = result
         scannerView?.setResultHandler(this)
         scannerView?.startCamera()
-
+        db = FirebaseFirestore.getInstance()
 
 
 /*        val intent = Intent(this,RegistroDeEntradaActivity::class.java)
@@ -83,12 +98,41 @@ class LeitorActivity: AppCompatActivity(),ResultHandler {
         startActivity(intent)*/
 
 
-        if (botao_clicado == "ButtonRegistrarSaida"){
-            val intent = Intent(this,RegistroDeSaidaActivity::class.java)
-            intent.putExtra("codigoProduto",result.toString())
-            intent.putExtra("usuario",usuario)
+        if (botao_clicado == "ButtonRegistrarSaida") {
+            val intent = Intent(this, RegistroDeSaidaActivity::class.java)
+            intent.putExtra("codigoProduto", result.toString())
+            intent.putExtra("usuario", usuario)
             finish()
             startActivity(intent)
+        }else if(botao_clicado == "ButtonCadastrarProduto"){
+
+            var  query =
+                db
+                    ?.collection(colecao_americanas)
+                    //?.startAt(newText)
+                    //?.endAt(newText)
+                    ?.whereEqualTo("imei",result.toString().trim())
+                    //?.whereEqualTo("imei","1111")
+                    //?.limit(10)
+
+            query?.get()?.addOnSuccessListener { documentos ->
+
+
+                if( documentos.size()==0 ){
+                    var intent = Intent(this,CadastroDeProdutoActivity::class.java)
+                    intent.putExtra("botao_clicado","ButtonEstoque")
+                    intent.putExtra("codigoProduto", result.toString())
+                    intent.putExtra("usuario",usuario)
+                    startActivity(intent)
+
+                }else{
+                    alerta("Produto já cadastrado")
+                }
+            }?.addOnFailureListener { error ->
+                //Util.exibirToast(baseContext, "Erro ao gravar dados: ${error.message.toString()}")
+                alerta("Erro ao gravar dados")
+            }
+
         }else{
             val intent = Intent(this,RegistroDeEntradaActivity::class.java)
             intent.putExtra("codigoProduto",result.toString())
@@ -179,6 +223,28 @@ class LeitorActivity: AppCompatActivity(),ResultHandler {
             else->{
                 return super.onOptionsItemSelected(item)
             }
+        }
+    }
+
+    fun alerta(message: String) {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        with(builder) {
+            setTitle("Informaçao")
+            setMessage(message)
+            setPositiveButton("OK", null)
+//            setNegativeButton("CANCEL", null)
+//            setNeutralButton("NEUTRAL", null)
+/*            setPositiveButtonIcon(resources.getDrawable(android.R.drawable.ic_dialog_alert, theme))
+            setIcon(resources.getDrawable(android.R.drawable.ic_dialog_alert, theme))*/
+        }
+        val alertDialog = builder.create()
+        alertDialog.show()
+
+        val button = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE)
+        with(button) {
+            setBackgroundColor(Color.BLUE)
+            setPadding(0, 0, 20, 0)
+            setTextColor(Color.WHITE)
         }
     }
 }

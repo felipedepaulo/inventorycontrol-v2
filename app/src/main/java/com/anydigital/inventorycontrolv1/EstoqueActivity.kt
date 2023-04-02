@@ -39,10 +39,21 @@ class EstoqueActivity : AppCompatActivity(), View.OnClickListener {
         when(p0?.id){
 
             binding.btRealizarAlterarCadastro.id ->{
-                var intent = Intent(this,CadastroDeProdutoActivity::class.java)
-                intent.putExtra("botao_clicado","ButtonEstoque")
-                intent.putExtra("usuario",usuario)
+
+                val intent = Intent(this, LeitorActivity::class.java)
+
+                intent.putExtra("botao_clicado", "ButtonCadastrarProduto")
+
+                if (usuario == "null") {
+                    val usuario = auth?.currentUser?.email
+                    intent.putExtra("usuario", usuario)
+                } else {
+                    intent.putExtra("usuario", usuario)
+                }
+                //finish()
                 startActivity(intent)
+
+
 
             }
             binding.btPesquisarEstoque.id ->{

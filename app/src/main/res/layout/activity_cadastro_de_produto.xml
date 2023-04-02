@@ -95,6 +95,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         style="@style/EditText"
+        android:focusable="false"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:inputType="number"

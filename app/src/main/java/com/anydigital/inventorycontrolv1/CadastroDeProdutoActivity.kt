@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -41,6 +42,9 @@ class CadastroDeProdutoActivity : AppCompatActivity(), View.OnClickListener {
         ActivityCadastroDeProdutoBinding.inflate(layoutInflater)
     }
 
+
+
+
     @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,11 @@ class CadastroDeProdutoActivity : AppCompatActivity(), View.OnClickListener {
 
         reference = db?.collection(colecao_americanas)
         //reference = db?.collection(colecao_samsung)
+        var dados = intent.extras
+        val codigoProduto = dados?.getString("codigoProduto").toString()
+
+
+        binding.edCodigoBarrasCadastro.setText(codigoProduto)
 
         binding.buttonCadastrarProduto.setOnClickListener(this)
         binding.buttonCancelaCadastro.setOnClickListener(this)
